@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4 mb-4">
+        <i class="fas fa-tasks text-primary me-3"></i>Welcome to TodoApp
+    </h1>
+    <p class="lead mb-4">Organize your tasks efficiently and stay productive!</p>
+
+    @if (User.Identity?.IsAuthenticated != true)
+    {
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h3 class="card-title text-primary">Get Started Today</h3>
+                        <p class="card-text">Create an account to start managing your tasks and boost your productivity.</p>
+                        <div class="d-grid gap-2 d-md-block">
+                            <a class="btn btn-primary btn-lg me-2" asp-area="Identity" asp-page="/Account/Register">
+                                <i class="fas fa-user-plus me-2"></i>Sign Up
+                            </a>
+                            <a class="btn btn-outline-primary btn-lg" asp-area="Identity" asp-page="/Account/Login">
+                                <i class="fas fa-sign-in-alt me-2"></i>Sign In
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-md-4 mb-3">
+                        <div class="text-center">
+                            <i class="fas fa-plus-circle fa-3x text-primary mb-3"></i>
+                            <h5>Create Tasks</h5>
+                            <p>Add new tasks with priority levels and due dates</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="text-center">
+                            <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
+                            <h5>Track Progress</h5>
+                            <p>Mark tasks as complete and monitor your progress</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="text-center">
+                            <i class="fas fa-filter fa-3x text-info mb-3"></i>
+                            <h5>Stay Organized</h5>
+                            <p>Filter and search tasks to find what you need quickly</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="card shadow">
+            <div class="card-body">
+                <h3 class="card-title">Welcome back!</h3>
+                <p class="card-text">Ready to tackle your tasks for today?</p>
+                <a class="btn btn-primary btn-lg" asp-controller="Todo" asp-action="Index">
+                    <i class="fas fa-list me-2"></i>View My Todos
+                </a>
+            </div>
+        </div>
+    }
+</div>

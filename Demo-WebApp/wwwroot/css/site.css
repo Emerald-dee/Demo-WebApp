@@ -1,0 +1,98 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #f8f9fa;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+    background-color: #ffffff;
+    border-top: 1px solid #dee2e6;
+}
+
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+    .card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.08);
+    }
+
+.todo-item.completed {
+    opacity: 0.7;
+}
+
+.priority-urgent {
+    border-left: 4px solid #dc3545;
+}
+
+.priority-high {
+    border-left: 4px solid #ffc107;
+}
+
+.priority-medium {
+    border-left: 4px solid #17a2b8;
+}
+
+.priority-low {
+    border-left: 4px solid #6c757d;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.alert {
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.btn-group .btn {
+    flex: 1;
+}
+
+.statistics-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 1rem;
+}
+
+@media (max-width: 768px) {
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+        .btn-group .btn {
+            border-radius: 0.375rem !important;
+            margin-bottom: 0.25rem;
+        }
+
+            .btn-group .btn:last-child {
+                margin-bottom: 0;
+            }
+}
