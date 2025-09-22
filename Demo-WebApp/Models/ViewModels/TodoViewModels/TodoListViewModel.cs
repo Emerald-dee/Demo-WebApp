@@ -1,4 +1,4 @@
-﻿namespace Demo_WebApp.Models.ViewModels
+﻿namespace Demo_WebApp.Models.ViewModels.TodoViewModels
 {
     public class TodoListViewModel
     {

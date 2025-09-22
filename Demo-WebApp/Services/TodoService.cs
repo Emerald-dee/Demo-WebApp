@@ -1,6 +1,6 @@
 ﻿using Demo_WebApp.Data;
 using Demo_WebApp.Models;
-using Demo_WebApp.Models.ViewModels;
+using Demo_WebApp.Models.ViewModels.TodoViewModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace Demo_WebApp.Services

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Demo_WebApp.Models.ViewModels
+namespace Demo_WebApp.Models.ViewModels.TodoViewModels
 {
     public class TodoCreateViewModel
     {

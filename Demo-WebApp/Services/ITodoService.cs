@@ -1,5 +1,5 @@
 ﻿using Demo_WebApp.Models;
-using Demo_WebApp.Models.ViewModels;
+using Demo_WebApp.Models.ViewModels.TodoViewModels;
 
 namespace Demo_WebApp.Services
 {
