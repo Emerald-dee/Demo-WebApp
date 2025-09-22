@@ -11,7 +11,9 @@ namespace Demo_WebApp.Models
         [Display(Name = "Last Name")]
         public string? LastName { get; set; }
 
+        /// <summary>
         public DateTime CreatedAt { get; set; } = DateTime.Now;
+        /// </summary>
 
         public virtual ICollection<TodoItem> TodoItems { get; set; } = new List<TodoItem>();
     }

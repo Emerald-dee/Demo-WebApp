@@ -79,10 +79,10 @@
                         <label for="priority">Priority:</label>
                         <select name="priority" class="form-control">
                             <option value="">All Priorities</option>
-                            <option value="1">@Model.FilterPriority == Demo_WebApp.Models.Priority.Low ? "Low" : ""</option>
-                            <option value="2">@Model.FilterPriority == Demo_WebApp.Models.Priority.Medium ? "Medium" : ""</option>
-                            <option value="3">@Model.FilterPriority == Demo_WebApp.Models.Priority.High ? "High" : ""</option>
-                            <option value="4">@Model.FilterPriority == DemoWebApp.Models.Priority.Urgent ? "Urgent" : ""</option>
+                            <option value="@((int)Demo_WebApp.Models.Priority.Low)" selected="@(Model.FilterPriority == Demo_WebApp.Models.Priority.Low ? "selected" : null)">Low</option>
+                            <option value="@((int)Demo_WebApp.Models.Priority.Medium)" selected="@(Model.FilterPriority == Demo_WebApp.Models.Priority.Medium ? "selected" : null)">Medium</option>
+                            <option value="@((int)Demo_WebApp.Models.Priority.High)" selected="@(Model.FilterPriority == Demo_WebApp.Models.Priority.High ? "selected" : null)">High</option>
+                            <option value="@((int)Demo_WebApp.Models.Priority.Urgent)" selected="@(Model.FilterPriority == Demo_WebApp.Models.Priority.Urgent ? "selected" : null)">Urgent</option>
                         </select>
                     </div>
                 </div>
@@ -91,8 +91,8 @@
                         <label for="completed">Status:</label>
                         <select name="completed" class="form-control">
                             <option value="">All</option>
-                            <option value="false">@Model.FilterCompleted == false ? "Pending" : ""</option>
-                            <option value="true">@Model.FilterCompleted = =true ? "Completed" : "" </option>
+                            <option value="false" selected="@(Model.FilterCompleted == false ? "selected" : null)">Pending</option>
+                            <option value="true" selected="@(Model.FilterCompleted == true ? "selected" : null)">Completed</option>
                         </select>
                     </div>
                 </div>
